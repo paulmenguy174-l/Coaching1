@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul MGY – Éducateur Sportif | Vannes</title>
+  <meta name="description" content="Paul MGY, éducateur sportif à domicile à Vannes et alentours (max 45 km). Renforcement, mobilité, remise en forme et performance. Séances solo, duo ou collectif + ebooks." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dino-green': '#1a3c2a',
+            'dino-green-light': '#2d5a3d',
+            'leaf': '#4a7c59',
+            'cream': '#f7f4ef',
+            'accent-orange': '#e85d04',
+            'soft-green': '#e8f0e9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background-color: #f7f4ef; }
+    
+    .dino-shadow {
+      box-shadow: 0 10px 40px -10px rgba(26, 60, 42, 0.25);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -12px rgba(26, 60, 42, 0.3);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #2d5a3d 0%, #1a3c2a 100%);
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(26, 60, 42, 0.4);
+    }
+    
+    .price-card {
+      transition: all 0.3s ease;
+    }
+    .price-card:hover {
+      transform: scale(1.03);
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body class="font-sans text-dino-green antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-dino-green/95 backdrop-blur-md text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#accueil" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+          🦖
+        </div>
+        <div>
+          <div class="font-display font-bold text-lg leading-tight">PAUL MGY</div>
+          <div class="text-xs text-green-200 tracking-wide">Éducateur Sportif</div>
+        </div>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#accueil" class="hover:text-green-200 transition">Accueil</a>
+        <a href="#apropos" class="hover:text-green-200 transition">À propos</a>
+        <a href="#services" class="hover:text-green-200 transition">Services</a>
+        <a href="#ebooks" class="hover:text-green-200 transition">Ebooks</a>
+        <a href="#tarifs" class="hover:text-green-200 transition">Tarifs</a>
+        <a href="#calculateur" class="hover:text-green-200 transition">Simulateur</a>
+        <a href="#contact" class="hover:text-green-200 transition">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full">
+        Réserver
+      </a>
+
+      <button id="menuBtn" class="md:hidden text-2xl p-2">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-dino-green border-t border-white/10">
+      <div class="px-4 py-4 flex flex-col gap-3 text-sm font-medium">
+        <a href="#accueil" class="py-2">Accueil</a>
+        <a href="#apropos" class="py-2">À propos</a>
+        <a href="#services" class="py-2">Services</a>
+        <a href="#ebooks" class="py-2">Ebooks</a>
+        <a href="#tarifs" class="py-2">Tarifs</a>
+        <a href="#calculateur" class="py-2">Simulateur</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="accueil" class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-soft-green via-cream to-white"></div>
+    <div class="absolute top-20 right-0 w-72 h-72 bg-leaf/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-0 w-96 h-96 bg-dino-green/5 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        
+        <div class="flex-1 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-dino-green/10 text-dino-green text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <span>🦖</span> Vannes & alentours • Max 45 km
+          </div>
+          
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+            PAUL <span class="text-leaf">MGY</span>
+          </h1>
+          <p class="text-xl sm:text-2xl font-semibold text-accent-orange mb-6">
+            Éducateur Sportif
+          </p>
+          
+          <p class="text-lg text-dino-green/80 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Moi, c’est Paul : instructeur fitness et pratiquant de musculation au poids du corps depuis plus de 10 ans.<br>
+            <strong class="text-dino-green">Mon truc : mobilité, proprioception et maîtrise de ton corps.</strong>
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#tarifs" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-full text-center">
+              Voir les tarifs
+            </a>
+            <a href="#calculateur" class="bg-white border-2 border-dino-green text-dino-green font-semibold px-8 py-3.5 rounded-full text-center hover:bg-dino-green hover:text-white transition">
+              Calculer mon prix
+            </a>
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 relative">
+          <div class="w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden dino-shadow bg-gradient-to-br from-leaf to-dino-green flex items-center justify-center relative">
+            <div class="text-center text-white/90 p-6">
+              <div class="text-6xl mb-4">📸</div>
+              <p class="font-medium">Ta photo ici</p>
+              <p class="text-sm opacity-80 mt-1">(comme sur le flyer)</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-2">
+            <span class="text-2xl">💪</span>
+            <div class="text-sm">
+              <div class="font-bold text-dino-green">+10 ans</div>
+              <div class="text-dino-green/70">d’expérience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== À PROPOS ========== -->
+  <section id="apropos" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Qui suis-je ?</h2>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-lg leading-relaxed text-dino-green/80 mb-6">
+            Pour moi, le bien-être physique est un pilier pour s’épanouir. 
+            J’adore transmettre ma passion et te voir progresser.
+          </p>
+          
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 bg-soft-green rounded-xl px-5 py-3">
+              <span class="text-xl">🎓</span>
+              <span class="font-medium">CQP Instructeur Fitness</span>
+            </div>
+            <div class="flex items-center gap-3 bg-soft-green rounded-xl px-5 py-3">
+              <span class="text-xl">📚</span>
+              <span class="font-medium">Formation Bayesian : musculation et nutrition</span>
+            </div>
+            <div class="flex items-center gap-3 bg-soft-green rounded-xl px-5 py-3">
+              <span class="text-xl">🏆</span>
+              <span class="font-medium">De nombreuses compétitions sportives</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dino-green text-white rounded-2xl p-8 relative overflow-hidden">
+          <div class="absolute top-0 right-0 text-8xl opacity-10">🦖</div>
+          <h3 class="font-display text-2xl font-bold mb-4">Tous niveaux</h3>
+          <p class="text-green-100 leading-relaxed">
+            Que tu sois débutant ou confirmé, on adapte chaque séance à ton niveau, 
+            tes objectifs et tes contraintes. L’important c’est de progresser à ton rythme, 
+            en toute sécurité et avec le sourire.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="py-20 bg-soft-green/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Ce qu’on travaille</h2>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white rounded-2xl p-6 text-center card-hover dino-shadow">
+          <div class="w-14 h-14 bg-dino-green text-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">💪</div>
+          <h3 class="font-bold text-lg mb-2">Renforcement musculaire</h3>
+          <p class="text-sm text-dino-green/70">Force, tonus et stabilité au poids du corps</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 text-center card-hover dino-shadow">
+          <div class="w-14 h-14 bg-dino-green text-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">🔥</div>
+          <h3 class="font-bold text-lg mb-2">Remise en forme</h3>
+          <p class="text-sm text-dino-green/70">Retrouver de l’énergie et se sentir mieux</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 text-center card-hover dino-shadow">
+          <div class="w-14 h-14 bg-dino-green text-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">⚡</div>
+          <h3 class="font-bold text-lg mb-2">Performance</h3>
+          <p class="text-sm text-dino-green/70">Progresser vers tes objectifs sportifs</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 text-center card-hover dino-shadow">
+          <div class="w-14 h-14 bg-dino-green text-white rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">🧘</div>
+          <h3 class="font-bold text-lg mb-2">Stretching & mobilité</h3>
+          <p class="text-sm text-dino-green/70">Souplesse, recovery et maîtrise du corps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EBOOKS ========== -->
+  <section id="ebooks" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Mes Ebooks</h2>
+        <p class="text-dino-green/70 max-w-xl mx-auto">Des guides pratiques pour progresser en mobilité et renforcement musculaire, à ton rythme.</p>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Ebook Débutant -->
+        <div class="bg-soft-green/50 rounded-2xl p-7 dino-shadow card-hover border border-dino-green/5">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 bg-dino-green text-white rounded-xl flex items-center justify-center text-2xl">📘</div>
+            <span class="bg-dino-green text-white text-xs font-bold px-3 py-1 rounded-full">Débutant</span>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Guide Mobilité & Renforcement</h3>
+          <p class="text-dino-green/70 text-sm mb-5 leading-relaxed">
+            Version accessible pour bien démarrer. Les bases de la mobilité et du renforcement au poids du corps, avec des exercices clairs et progressifs.
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="text-3xl font-extrabold text-dino-green">20 €</div>
+              <div class="text-xs text-dino-green/60 mt-1">Prix seul</div>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-bold text-leaf">16 €</div>
+              <div class="text-xs text-leaf">avec coaching (−20%)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ebook Détaillé -->
+        <div class="bg-white rounded-2xl p-7 dino-shadow card-hover border-2 border-leaf relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-leaf text-white text-xs font-bold px-4 py-1 rounded-bl-xl">Le plus complet</div>
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-14 h-14 bg-leaf text-white rounded-xl flex items-center justify-center text-2xl">📗</div>
+            <span class="bg-leaf text-white text-xs font-bold px-3 py-1 rounded-full">Avancé</span>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Guide Complet Mobilité & Renforcement</h3>
+          <p class="text-dino-green/70 text-sm mb-5 leading-relaxed">
+            Version beaucoup plus détaillée : progressions, variantes, conseils d’exécution, programmation et tips pour progresser durablement.
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="text-3xl font-extrabold text-dino-green">50 €</div>
+              <div class="text-xs text-dino-green/60 mt-1">Prix seul</div>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-bold text-leaf">40 €</div>
+              <div class="text-xs text-leaf">avec coaching (−20%)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-accent-orange/10 text-accent-orange font-semibold px-5 py-2.5 rounded-full text-sm">
+          <span>🎁</span> −20 % sur l’ebook quand tu prends un coaching personnalisé
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHEZ TOI ========== -->
+  <section class="py-20 bg-soft-green/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Chez toi</h2>
+          <p class="text-2xl font-semibold text-leaf italic mb-6">Pas de salle ? Pas de souci.</p>
+          <p class="text-lg text-dino-green/80 leading-relaxed mb-6">
+            Un sac à dos, des bouteilles, une chaise : on s’entraîne chez toi, avec peu de matériel.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-leaf text-xl">✓</span>
+              <span>Séances à domicile ou en extérieur</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-leaf text-xl">✓</span>
+              <span>Matériel minimal (ou aucun)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-leaf text-xl">✓</span>
+              <span>Adapté à ton espace et ton niveau</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-leaf text-xl">✓</span>
+              <span><strong>Zone d’intervention : 45 km max autour de Vannes</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white rounded-2xl h-48 flex items-center justify-center text-center p-4 dino-shadow">
+            <div>
+              <div class="text-4xl mb-2">🏠</div>
+              <p class="text-sm font-medium">Entraînement à domicile</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl h-48 flex items-center justify-center text-center p-4 dino-shadow">
+            <div>
+              <div class="text-4xl mb-2">🌳</div>
+              <p class="text-sm font-medium">Séances en extérieur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-gradient-to-r from-dino-green to-leaf text-white rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6">
+        <div class="text-5xl flex-shrink-0">🦖</div>
+        <p class="text-lg sm:text-xl font-medium italic text-center sm:text-left">
+          « Scientifiquement, le T-Rex a les bras trop courts pour faire un équilibre. Heureusement, personne ne lui a dit. »
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TARIFS ========== -->
+  <section id="tarifs" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Les tarifs</h2>
+        <p class="text-dino-green/70">Séance d’1 heure</p>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        
+        <!-- SOLO -->
+        <div class="price-card bg-white rounded-2xl overflow-hidden dino-shadow border border-dino-green/10">
+          <div class="bg-dino-green text-white text-center py-4">
+            <h3 class="font-display text-xl font-bold">SOLO</h3>
+            <p class="text-sm text-green-200">Séance individuelle</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-end border-b border-soft-green pb-3">
+              <div>
+                <div class="font-semibold">5 séances</div>
+                <div class="text-sm text-dino-green/60">soit 80€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">400€</div>
+            </div>
+            <div class="flex justify-between items-end border-b border-soft-green pb-3">
+              <div>
+                <div class="font-semibold">10 séances</div>
+                <div class="text-sm text-dino-green/60">soit 70€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">700€</div>
+            </div>
+            <div class="flex justify-between items-end">
+              <div>
+                <div class="font-semibold">20 séances</div>
+                <div class="text-sm text-dino-green/60">soit 50€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">1000€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUO -->
+        <div class="price-card bg-white rounded-2xl overflow-hidden dino-shadow border border-dino-green/10">
+          <div class="bg-leaf text-white text-center py-4">
+            <h3 class="font-display text-xl font-bold">DUO</h3>
+            <p class="text-sm text-green-100">Avec un proche</p>
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-end border-b border-soft-green pb-3">
+              <div>
+                <div class="font-semibold">5 séances</div>
+                <div class="text-sm text-dino-green/60">soit 100€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">500€</div>
+            </div>
+            <div class="flex justify-between items-end border-b border-soft-green pb-3">
+              <div>
+                <div class="font-semibold">10 séances</div>
+                <div class="text-sm text-dino-green/60">soit 90€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">900€</div>
+            </div>
+            <div class="flex justify-between items-end">
+              <div>
+                <div class="font-semibold">20 séances</div>
+                <div class="text-sm text-dino-green/60">soit 60€ la séance</div>
+              </div>
+              <div class="text-2xl font-bold text-dino-green">1200€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLLECTIF -->
+        <div class="price-card bg-white rounded-2xl overflow-hidden dino-shadow border-2 border-accent-orange">
+          <div class="bg-accent-orange text-white text-center py-4">
+            <h3 class="font-display text-xl font-bold">COLLECTIF</h3>
+            <p class="text-sm text-orange-100">Jusqu’à 12 personnes</p>
+          </div>
+          <div class="p-6 flex flex-col items-center justify-center h-full min-h-[220px]">
+            <div class="text-5xl font-extrabold text-accent-orange mb-2">20€</div>
+            <p class="text-center text-dino-green/80 mb-4">par personne<br>session d’1h</p>
+            <p class="text-sm text-center italic text-dino-green/60">« Très agréables et à l’écoute »</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo + déplacement -->
+      <div class="grid sm:grid-cols-2 gap-5 mb-6">
+        <div class="bg-accent-orange text-white rounded-2xl p-6 flex items-center gap-4">
+          <div class="text-4xl font-black">-50%</div>
+          <div>
+            <div class="font-bold text-lg">Sur ta 1<sup>re</sup> séance</div>
+            <div class="text-orange-100 text-sm">Solo et Duo • Base 80€ → 40€</div>
+          </div>
+        </div>
+        <div class="bg-soft-green rounded-2xl p-6">
+          <div class="font-bold mb-1">🚗 Déplacement (max 45 km)</div>
+          <p class="text-sm text-dino-green/80">
+            Jusqu’à <strong>25 km</strong> : offert<br>
+            Au-delà : <strong>+10€</strong> par tranche de 10 km entamée<br>
+            <span class="text-xs">Exemple : 35 km = +10€ • 45 km = +20€</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CALCULATEUR INTERACTIF ========== -->
+  <section id="calculateur" class="py-20 bg-soft-green/50">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Simulateur de prix</h2>
+        <p class="text-dino-green/70">Calcule le coût selon la distance, la formule et l’ebook choisi</p>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 sm:p-8 dino-shadow">
+        
+        <!-- Type de formule -->
+        <div class="mb-6">
+          <label class="block font-semibold mb-3">1. Choisis ta formule coaching</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button type="button" data-type="solo-1" class="formule-btn active bg-dino-green text-white rounded-xl py-3 px-2 text-sm font-medium transition">
+              1ère séance<br><span class="text-xs opacity-80">Solo</span>
+            </button>
+            <button type="button" data-type="solo-5" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Solo 5<br><span class="text-xs opacity-70">80€/séance</span>
+            </button>
+            <button type="button" data-type="solo-10" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Solo 10<br><span class="text-xs opacity-70">70€/séance</span>
+            </button>
+            <button type="button" data-type="solo-20" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Solo 20<br><span class="text-xs opacity-70">50€/séance</span>
+            </button>
+            <button type="button" data-type="duo-5" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Duo 5<br><span class="text-xs opacity-70">100€/séance</span>
+            </button>
+            <button type="button" data-type="duo-10" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Duo 10<br><span class="text-xs opacity-70">90€/séance</span>
+            </button>
+            <button type="button" data-type="duo-20" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Duo 20<br><span class="text-xs opacity-70">60€/séance</span>
+            </button>
+            <button type="button" data-type="collectif" class="formule-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-2 text-sm font-medium transition hover:border-dino-green">
+              Collectif<br><span class="text-xs opacity-70">20€ / pers.</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Ebook option -->
+        <div class="mb-6">
+          <label class="block font-semibold mb-3">2. Ajouter un ebook ? <span class="text-leaf text-sm font-normal">(−20 % avec coaching)</span></label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <button type="button" data-ebook="none" class="ebook-btn active bg-dino-green text-white rounded-xl py-3 px-3 text-sm font-medium transition">
+              Sans ebook
+            </button>
+            <button type="button" data-ebook="debutant" class="ebook-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-3 text-sm font-medium transition hover:border-dino-green">
+              Guide Débutant<br><span class="text-xs opacity-80">16 € au lieu de 20 €</span>
+            </button>
+            <button type="button" data-ebook="complet" class="ebook-btn bg-soft-green border-2 border-transparent rounded-xl py-3 px-3 text-sm font-medium transition hover:border-dino-green">
+              Guide Complet<br><span class="text-xs opacity-80">40 € au lieu de 50 €</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Distance -->
+        <div class="mb-8">
+          <label class="block font-semibold mb-3">3. Distance depuis Vannes (km)</label>
+          <div class="flex items-center gap-4">
+            <input type="range" id="kmRange" min="0" max="50" value="15" class="flex-1 h-2 bg-dino-green/20 rounded-lg appearance-none cursor-pointer accent-dino-green">
+            <div class="w-24">
+              <input type="number" id="kmInput" min="0" max="50" value="15" class="w-full bg-soft-green border-2 border-dino-green/20 rounded-xl px-3 py-2 text-center font-bold text-lg focus:outline-none focus:border-dino-green">
+            </div>
+            <span class="font-medium">km</span>
+          </div>
+          <div class="flex justify-between text-xs text-dino-green/60 mt-2 px-1">
+            <span>0 km</span>
+            <span class="text-leaf font-medium">25 km = offert</span>
+            <span>45 km max</span>
+          </div>
+        </div>
+
+        <!-- Résultat -->
+        <div id="resultBox" class="bg-soft-green/60 rounded-2xl p-6 border-2 border-dino-green/10">
+          <div class="text-center">
+            <p class="text-sm text-dino-green/60 mb-1">Prix estimé</p>
+            <div id="totalPrice" class="text-4xl sm:text-5xl font-extrabold text-dino-green mb-2">40 €</div>
+            <p id="priceDetail" class="text-sm text-dino-green/70">1ère séance Solo (−50%) + déplacement offert</p>
+            
+            <div id="breakdown" class="mt-5 pt-5 border-t border-dino-green/10 text-left text-sm space-y-2 hidden">
+              <!-- filled by JS -->
+            </div>
+
+            <div id="horsZone" class="hidden mt-4 bg-red-50 text-red-700 rounded-xl p-4 text-sm font-medium">
+              ⚠️ Au-delà de 45 km : hors zone d’intervention
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-xs text-dino-green/50 mt-4">
+          Estimation indicative • Le prix final sera confirmé lors de la prise de contact
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="py-20 bg-dino-green text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-3">Pour me contacter</h2>
+        <div class="w-20 h-1.5 bg-leaf mx-auto rounded-full"></div>
+        <p class="mt-4 text-green-200">Vannes et alentours (max 45 km)</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl">📞</div>
+            <div>
+              <div class="text-sm text-green-200">Téléphone</div>
+              <div class="font-semibold text-lg">06 XX XX XX XX</div>
+              <div class="text-xs text-green-300">(à remplacer)</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl">✉️</div>
+            <div>
+              <div class="text-sm text-green-200">Email</div>
+              <div class="font-semibold text-lg">contact@paulmgy.fr</div>
+              <div class="text-xs text-green-300">(à remplacer)</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl">📍</div>
+            <div>
+              <div class="text-sm text-green-200">Zone</div>
+              <div class="font-semibold text-lg">Vannes + 45 km max</div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="#" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 transition px-5 py-3 rounded-full text-sm font-medium">
+              <span>📸</span> Instagram – @paulmgy
+              <span class="text-xs opacity-70">(à remplacer)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+          <h3 class="font-bold text-lg mb-4">Envoyer un message</h3>
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Formulaire de démonstration – à connecter plus tard (Formspree, Netlify, etc.)');">
+            <div>
+              <input type="text" placeholder="Ton prénom" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-green-200 focus:outline-none focus:border-leaf" required>
+            </div>
+            <div>
+              <input type="email" placeholder="Ton email" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-green-200 focus:outline-none focus:border-leaf" required>
+            </div>
+            <div>
+              <textarea rows="4" placeholder="Ton message (objectif, disponibilité, distance approximative...)" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-green-200 focus:outline-none focus:border-leaf resize-none" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-leaf hover:bg-green-600 transition text-white font-semibold py-3.5 rounded-xl">
+              Envoyer
+            </button>
+          </form>
+          <p class="text-xs text-green-300 mt-3 text-center">Formulaire de démo – tu pourras le brancher facilement après</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dino-green/90 text-green-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🦖</span>
+        <span>Paul MGY – Éducateur Sportif</span>
+      </div>
+      <div>© 2026 – Vannes & alentours (45 km max)</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // ========== CALCULATEUR ==========
+    const prices = {
+      'solo-1':  { base: 80,  label: '1ère séance Solo', discount: 0.5 },
+      'solo-5':  { base: 80,  label: 'Solo (forfait 5)' },
+      'solo-10': { base: 70,  label: 'Solo (forfait 10)' },
+      'solo-20': { base: 50,  label: 'Solo (forfait 20)' },
+      'duo-5':   { base: 100, label: 'Duo (forfait 5)' },
+      'duo-10':  { base: 90,  label: 'Duo (forfait 10)' },
+      'duo-20':  { base: 60,  label: 'Duo (forfait 20)' },
+      'collectif': { base: 20, label: 'Collectif (par personne)' }
+    };
+
+    const ebooks = {
+      none:      { price: 0,  full: 0,  label: '' },
+      debutant:  { price: 16, full: 20, label: 'Guide Débutant' },
+      complet:   { price: 40, full: 50, label: 'Guide Complet' }
+    };
+
+    let currentType = 'solo-1';
+    let currentEbook = 'none';
+
+    // Formula buttons
+    document.querySelectorAll('.formule-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.formule-btn').forEach(b => {
+          b.classList.remove('bg-dino-green', 'text-white', 'active');
+          b.classList.add('bg-soft-green', 'border-2', 'border-transparent');
+        });
+        btn.classList.remove('bg-soft-green', 'border-2', 'border-transparent');
+        btn.classList.add('bg-dino-green', 'text-white', 'active');
+        currentType = btn.dataset.type;
+        calculate();
+      });
+    });
+
+    // Ebook buttons
+    document.querySelectorAll('.ebook-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ebook-btn').forEach(b => {
+          b.classList.remove('bg-dino-green', 'text-white', 'active');
+          b.classList.add('bg-soft-green', 'border-2', 'border-transparent');
+        });
+        btn.classList.remove('bg-soft-green', 'border-2', 'border-transparent');
+        btn.classList.add('bg-dino-green', 'text-white', 'active');
+        currentEbook = btn.dataset.ebook;
+        calculate();
+      });
+    });
+
+    // Km inputs
+    const kmRange = document.getElementById('kmRange');
+    const kmInput = document.getElementById('kmInput');
+
+    kmRange.addEventListener('input', () => {
+      kmInput.value = kmRange.value;
+      calculate();
+    });
+
+    kmInput.addEventListener('input', () => {
+      let val = parseInt(kmInput.value) || 0;
+      if (val < 0) val = 0;
+      if (val > 50) val = 50;
+      kmInput.value = val;
+      kmRange.value = val;
+      calculate();
+    });
+
+    function calculateTravel(km) {
+      if (km <= 25) return 0;
+      if (km > 45) return null;
+      const extra = km - 25;
+      const tranches = Math.ceil(extra / 10);
+      return tranches * 10;
+    }
+
+    function calculate() {
+      const km = parseInt(kmInput.value) || 0;
+      const config = prices[currentType];
+      const ebook = ebooks[currentEbook];
+      const travel = calculateTravel(km);
+
+      const totalPriceEl = document.getElementById('totalPrice');
+      const priceDetailEl = document.getElementById('priceDetail');
+      const breakdownEl = document.getElementById('breakdown');
+      const horsZoneEl = document.getElementById('horsZone');
+
+      if (travel === null) {
+        totalPriceEl.textContent = '—';
+        priceDetailEl.textContent = '';
+        breakdownEl.classList.add('hidden');
+        horsZoneEl.classList.remove('hidden');
+        return;
+      }
+
+      horsZoneEl.classList.add('hidden');
+
+      let sessionPrice = config.base;
+      let discountAmount = 0;
+
+      if (config.discount) {
+        discountAmount = sessionPrice * config.discount;
+        sessionPrice = sessionPrice - discountAmount;
+      }
+
+      const total = sessionPrice + travel + ebook.price;
+
+      totalPriceEl.textContent = total + ' €';
+
+      let detailParts = [config.label];
+      if (config.discount) detailParts[0] += ' (−50%)';
+      if (ebook.price > 0) detailParts.push(ebook.label + ' (−20%)');
+      if (travel === 0) {
+        detailParts.push('déplacement offert');
+      } else {
+        detailParts.push(travel + '€ déplacement');
+      }
+      priceDetailEl.textContent = detailParts.join(' + ');
+
+      // Breakdown
+      let html = '';
+      html += `<div class="flex justify-between"><span>Prix de base séance</span><span>${config.base} €</span></div>`;
+      if (discountAmount > 0) {
+        html += `<div class="flex justify-between text-accent-orange"><span>Réduction 1ère séance (−50%)</span><span>−${discountAmount} €</span></div>`;
+      }
+      if (ebook.price > 0) {
+        html += `<div class="flex justify-between"><span>${ebook.label}</span><span>${ebook.full} €</span></div>`;
+        html += `<div class="flex justify-between text-leaf"><span>Réduction ebook (−20%)</span><span>−${ebook.full - ebook.price} €</span></div>`;
+      }
+      html += `<div class="flex justify-between"><span>Déplacement (${km} km)</span><span>${travel === 0 ? 'Offert' : travel + ' €'}</span></div>`;
+      html += `<div class="flex justify-between font-bold pt-2 border-t border-dino-green/20"><span>Total</span><span>${total} €</span></div>`;
+
+      breakdownEl.innerHTML = html;
+      breakdownEl.classList.remove('hidden');
+    }
+
+    // Initial calculation
+    calculate();
+  </script>
+</body>
+</html>
